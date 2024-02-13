@@ -13,12 +13,12 @@ def bubble_sort(arr):
                 num_swaps += 1
     return num_comparisons, num_swaps
 
-def main():
-    input_sizes = [10, 20, 50, 100, 200, 500]
-    for size in input_sizes:
-        arr = [random.randint(0, 1000) for _ in range(size)]
-        comparisons, swaps = bubble_sort(arr)
-        print(f"Input Size: {size}, Comparisons: {comparisons}, Swaps: {swaps}")
+
+input_sizes = [10, 20, 50, 100, 200, 500]
+for size in input_sizes:
+    arr = [random.randint(0, 1000) for _ in range(size)]
+    comparisons, swaps = bubble_sort(arr)
+    print(f"Input Size: {size}, Comparisons: {comparisons}, Swaps: {swaps}")
 
 # Plotting the results
 plt.figure(figsize=(14, 6))
@@ -43,6 +43,3 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
-
-if __name__ == "__main__":
-    main()
